@@ -146,6 +146,11 @@ const App = () => {
                             "id": "usr-5",
                             "name": "Suresh",
                             "available": true
+                        },
+                        {
+                            "id": "usr-5",
+                            "name": "mradul",
+                            "available": true
                         }
                     ]
                 };
