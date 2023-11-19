@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.75em;
+}
+
+body {
+    background-color: #f4f5f8;
+}
+
+.nav {
+    background-color: white;
+    padding: 1%;
+}
+
+.nav div {
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 4px 4px 4px rgb(219, 219, 218);
+    cursor: pointer;
+}
+
+.menu-open {
+    display: block;
+}
+
+.menu-close {
+    display: none;
+}
+
+.menuContainer {
+    position: absolute;
+    width: 18rem;
+    background-color: #f4f5f8;
+    padding: 8px;
+    border: 1px solid #b6b8bd;
+    border-radius: 10px;
+    margin-left: 15px;
+    z-index: 10;
+}
+
+select {
+    border: 1px solid #d7d8da;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.options {
+    padding-left: 5rem;
+}
+
+.menuTitle {
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 5rem;
+    color: #95989d;
+}
+
+.sub-menuContainer {
+    display: flex;
+    margin: 10px;
+}

@@ -1,0 +1,146 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container .mega {
+    margin: 0 5px 0 5px;
+}
+
+.container .mega .top {
+    max-width: 310px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.container .mega .top .left {
+    display: flex;
+    align-items: center;
+}
+
+.container .mega .top .left p {
+    margin-left: 10px;
+    font-weight: 900;
+}
+
+.container .mega .top .left .count {
+    margin-left: 10px;
+    color: #95989d;
+}
+
+.container .mega .top .right {
+    display: flex;
+    align-items: center;
+}
+
+.container .mega .top .right span {
+    font-size: 30px;
+    color: #95989d;
+    cursor: pointer;
+}
+
+.container .mega .top .right .dots {
+    font-size: 30px;
+    color: #95989d;
+    margin-left: 10px;
+    position: relative;
+    top: -8px;
+}
+
+.big-box {
+    width: 18rem;
+    margin: 3px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.big-box .header {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.big-box .header h4 {
+    font-size: 14px;
+    color: #95989d;
+}
+
+.big-box .header .image {
+    background-color: aqua;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.big-box .header .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.big-box .header .image .large-dot {
+    color: #95989d;
+    position: relative;
+    top: -32px;
+    right: -7px;
+}
+
+.big-box p {
+    font-weight: lighter;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottom {
+    display: flex;
+}
+
+.box {
+    border: 1px solid #eeeeee;
+    text-align: center;
+    height: 20px;
+    padding: 0 3px 0 3px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.box1 {
+    border: 1px solid #eeeeee;
+    text-align: center;
+    margin-left: 10px;
+    height: 20px;
+    padding: 0 6px 0 3px;
+    color: #95989d;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.dots {
+    font-size: 24px;
+    position: relative;
+    top: -15px;
+    color: #95989d;
+}
+
+.large-dot {
+    font-size: 36px;
+    position: relative;
+    top: -18px;
+}
+
+.word {
+    font-size: 12px;
+    font-weight: 200;
+    position: relative;
+    top: -26px;
+}
