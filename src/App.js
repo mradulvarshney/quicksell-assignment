@@ -11,6 +11,7 @@ const App = () => {
     const [tickets, setTickets] = useState([]);
     const [users, setUsers] = useState([]);
     const [sortOption, setSortOption] = useState('priority');
+    const [groupingOption, setGroupingOption] = useState('status');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -159,17 +160,40 @@ const App = () => {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        if(localStorage.getItem('sortOption') == null){
+            localStorage.setItem('sortOption', sortOption);
+        }
+        else{
+            setSortOption(localStorage.getItem('sortOption'))
+        }
+
+        if(localStorage.getItem('groupingOption') == null){
+            localStorage.setItem('groupingOption', groupingOption);
+        }
+        else{
+            setGroupingOption(localStorage.getItem('groupingOption'))
+        }
+
+    })
+
     const handleSortChange = (option) => {
         setSortOption(option);
+        localStorage.setItem('sortOption', option);
+    };
+
+    const handleGroupingSortChange = (option) => {
+        setGroupingOption(option);
+        localStorage.setItem('groupingOption', option);
     };
 
     return (
         <BrowserRouter>
-            <Navbar handleSortChange={handleSortChange} sortOption={sortOption} />
+            <Navbar handleSortChange={handleSortChange} sortOption={sortOption} handleGroupingSortChange={handleGroupingSortChange} groupingOption={groupingOption}  />
             <Routes>
-                <Route path="/" exact element={<Status tickets={tickets} sortOption={sortOption} />} />
-                <Route path="/users" exact element={<Users tickets={tickets} users={users} sortOption={sortOption} />} />
-                <Route path="/priority" exact element={<Priority tickets={tickets} sortOption={sortOption} />} />
+                <Route path="/" exact element={<Status tickets={tickets} sortOption={sortOption} groupingOption={groupingOption} users={users}  />} />
+                {/* <Route path="/users" exact element={<Users tickets={tickets} users={users} sortOption={sortOption} />} />
+                <Route path="/priority" exact element={<Priority tickets={tickets} sortOption={sortOption} />} /> */}
             </Routes >
         </BrowserRouter>
     );

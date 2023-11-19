@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../assets/css/navbar.css'
 
-const Navbar = ({ handleSortChange, sortOption }) => {
+const Navbar = ({ handleSortChange, sortOption, handleGroupingSortChange, groupingOption }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -19,7 +19,7 @@ const Navbar = ({ handleSortChange, sortOption }) => {
             <div className={`menuContainer ${isMenuOpen ? 'menu-open' : 'menu-close'}`}>
                 <div div className="sub-menuContainer" >
                     <span className="menuTitle">Grouping</span>
-                    <select name="" id="grouping">
+                    <select name="" id="grouping" value={groupingOption} onChange={(e) => handleGroupingSortChange(e.target.value)}>
                         <option className="options" value="status">
                             Status
                         </option>
