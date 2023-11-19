@@ -1,23 +1,4 @@
-// const [ticketData, setTicketData] = useState(null);
-
-// useEffect(() => {
-//   const fetchData = async () => {
-//     try {
-// //       // const url = `https://api.quicksell.co/v1/internal/frontend-assignment`;
-//       const response = await fetch('../assets/data/data.json');
-//       const data = await response.json();
-//       setTicketData(data);
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   };
-
-//   fetchData();
-// }, []);
-
-const Card = ({ ticket, users }) => {
-	// const user = users.find((u) => u.id === ticket.userId);
-
+const Card = ({ticket}) => {
 	return (
 		<div className="big-box">
 			<div className="header">
@@ -36,10 +17,6 @@ const Card = ({ ticket, users }) => {
 					<span className="large-dot">•</span>
 					<span className="word">{ticket.tag.join(', ')}</span>
 				</div>
-				{/* <div>
-                  <label htmlFor="">Priority: </label>
-                  <span> {ticket.priority}</span>
-                </div> */}
 			</div>
 		</div>
 	);
