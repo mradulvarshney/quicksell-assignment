@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/css/navbar.css'
 
 const Navbar = ({ handleSortChange, sortOption, handleGroupingSortChange, groupingOption }) => {
@@ -12,7 +12,7 @@ const Navbar = ({ handleSortChange, sortOption, handleGroupingSortChange, groupi
                 <div style={{ border: "1px solid #95989d", display: "inline", padding: "5px", marginLeft: "20px" }}>
                     <i className="fas fa-sliders-h fa-rotate-180" style={{ color: "#616365", marginRight: "10px" }}></i>
                     Display
-                    <i className="fas fa-regular fa-chevron-down" style={{marginLeft: "10px"}}></i>
+                    <i className="fas fa-regular fa-chevron-down" style={{ marginLeft: "10px" }}></i>
                 </div>
             </div >
 
