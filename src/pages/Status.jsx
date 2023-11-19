@@ -66,9 +66,7 @@ const Status = ({ tickets, sortOption, groupingOption, users }) => {
       icon: 'user-icon-class', // Add the appropriate user icon class
       user: user.id,
     }));
-  } else {
-    columns = []; // Handle other cases if needed
-  }
+  } 
 
   return (
     <div className="container">
